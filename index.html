@@ -15,12 +15,11 @@
         <input type="text" ng-model="guess.name" placeholder = "Name Goes Here"/>
         <input type="text" ng-model="guess.github" placeholder = "github Account Here" />
        <button ng-click = "guess.submit()">Submit</button>
-<ul>
-    <li ng-repeat = "person in guess.people">
+
+    <div ng-repeat = "person in guess.people">
     <p ng-hide = "person.name"></p>
     <img ng-click = "guess.game(person.name)" ng-src="https://github.com/{{person.github}}.png?size=80">
-    </li>
-</ul>
+    </div>
     </div>    
 </body>
 </html>

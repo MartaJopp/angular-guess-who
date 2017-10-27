@@ -13,6 +13,8 @@ guess.submit = function () { //submit inputs
     console.log(newPerson); //logging data just sent
     people.push(newPerson); //sending objects to people array
     console.log(people);
+    guess.name = '';
+    guess.github = '';
 }
 
 var people = [{ name: 'Chris', github: 'christopher-black' },
