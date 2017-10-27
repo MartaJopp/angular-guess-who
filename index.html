@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src = "angular.min.js"></script>
+    <script src = "client.js"></script>
+    <title>Angular Guess Who</title>
+</head>
+<body ng-app="myApp">
+    <div ng-controller="guessWhoController as guess">
+         <h1>Angular Guess Who</h1>
+         <h2>{{guess.message}}</h2>
+        <input type="text" ng-model="guess.name"/>
+        <input type="text" ng-model="guess.github" />
+       <button ng-click = "guess.submit()">Submit</button>
+<ul>
+    <li ng-repeat = "person in guess.people">
+    <p ng-hide = "person.name"></p>
+    <img ng-click = "guess.game(person.name)" ng-src="https://github.com/{{person.github}}.png?size=80">
+    </li>
+</ul>
+    </div>    
+</body>
+</html>
+
+
+    
