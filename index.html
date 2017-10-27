@@ -12,8 +12,8 @@
     <div ng-controller="guessWhoController as guess">
          <h1>Angular Guess Who</h1>
          <h2>{{guess.message}}</h2>
-        <input type="text" ng-model="guess.name"/>
-        <input type="text" ng-model="guess.github" />
+        <input type="text" ng-model="guess.name" placeholder = "Name Goes Here"/>
+        <input type="text" ng-model="guess.github" placeholder = "github Account Here" />
        <button ng-click = "guess.submit()">Submit</button>
 <ul>
     <li ng-repeat = "person in guess.people">
